@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.15)
+project(V)
+
+set(dirs)
+set(cur_path "${CMAKE_CURRENT_LIST_DIR}")
+file(GLOB subs RELATIVE "${cur_path}" "${cur_path}/*")
+message(STATUS "Subs: ${subs}")
+
+foreach(_sub ${subs})
+    # 构造完整路径
+    set(full_path "${cur_path}/${_sub}")
+    
+    # 检查是否是完整目录
+    if(IS_DIRECTORY ${full_path})
+        message(STATUS "Directory found: ${_sub}")
+        list(APPEND dirs ${_sub})
+    endif()
+endforeach()

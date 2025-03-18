@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.12)
+project(test)
+
+# 定义变量
+# 静态库生成路径
+set(LIBPATH ${PROJECT_SOURCE_DIR}/lib)
+# 设置exe生成路径
+set(EXEPATH ${PROJECT_SOURCE_DIR}/bin)
+# 设置头文件
+set(HEADPATH ${PROJECT_SOURCE_DIR}/include)
+
+# 设置库的名字
+set(CALCLIB calc)
+set(SORTLIB sort)
+# 设置exe目录
+set(CALCAPP app1)
+set(SORTAPP app2)
+
+# 给当前节点添加子节点
+add_subdirectory(calc)
+add_subdirectory(sort)
+add_subdirectory(test_sort)

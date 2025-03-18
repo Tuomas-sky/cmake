@@ -1,0 +1,27 @@
+# cmake_minimum_required(VERSION 3.12)
+# project(calc)
+
+# # 搜索源文件
+# aux_source_directory(./ SRC)
+# include_directories(${HEADPATH})
+# set(LIBRARY_OUTPUT_PATH ${LIBPATH})
+# add_library(${CALCLIB} SHARED ${SRC})
+
+
+cmake_minimum_required(VERSION 3.12)
+project(calc)
+
+# 搜索源文件
+aux_source_directory(./ SRC)
+include_directories(${HEADPATH})
+set(LIBRARY_OUTPUT_PATH ${LIBPATH})
+
+# 生成动态库
+add_library(${CALCLIB} SHARED ${SRC})
+
+# 生成静态库
+add_library(${CALCLIB}_static STATIC ${SRC})
+set_target_properties(${CALCLIB}_static PROPERTIES OUTPUT_NAME ${CALCLIB})
+
+# 链接库
+target_link_libraries(${CALCLIB} ${CALCLIB}_static)

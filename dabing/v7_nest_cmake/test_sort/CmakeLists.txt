@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.12)
+project(test_sort)
+
+aux_source_directory(./ SRC)
+include_directories(${HEADPATH})
+link_directories(${LIBPATH})
+# 链接静态库
+# link_libraries(${SORTLIB})
+# set(EXECUTABLE_OUTPUT_PATH ${EXEPATH})
+# add_executable(${SORTAPP} ${SRC})
+# 连接动态库
+set(EXECUTABLE_OUTPUT_PATH ${EXEPATH})
+add_executable(${SORTAPP} ${SRC})
+target_link_libraries(${SORTAPP} ${SORTLIB})

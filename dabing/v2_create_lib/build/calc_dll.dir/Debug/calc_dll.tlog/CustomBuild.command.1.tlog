@@ -1,0 +1,10 @@
+^D:\PROJECT\CMAKE\V2_CREATE_LIB\CMAKELISTS.TXT
+setlocal
+D:\software\CMake\bin\cmake.exe -SD:/Project/Cmake/v2_create_lib -BD:/Project/Cmake/v2_create_lib/build --check-stamp-file D:/Project/Cmake/v2_create_lib/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

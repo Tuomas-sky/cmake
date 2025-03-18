@@ -1,0 +1,4 @@
+D:/Project/Cmake/v2_create_lib/build/CMakeFiles/calc_dll.dir
+D:/Project/Cmake/v2_create_lib/build/CMakeFiles/calc_lib.dir
+D:/Project/Cmake/v2_create_lib/build/CMakeFiles/ALL_BUILD.dir
+D:/Project/Cmake/v2_create_lib/build/CMakeFiles/ZERO_CHECK.dir

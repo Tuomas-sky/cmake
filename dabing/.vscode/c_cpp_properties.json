@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${default}",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/v2_lib/include",
+                "${workspaceFolder}/v1/include",
+                "${workspaceFolder}/v1",
+                "${workspaceFolder}/v3_test_lib",
+                "${workspaceFolder}/v3_test_lib",
+                "${workspaceFolder}/v7_nest_cmake/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.26100.0",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,10 @@
+^D:\PROJECT\CMAKE\V8_NEST_RELY\BUILD\CMAKEFILES\B832DD7ACEEEFCE220811E8CD4E1D034\GENERATE.STAMP.RULE
+setlocal
+D:\software\CMake\bin\cmake.exe -SD:/Project/Cmake/v8_nest_rely -BD:/Project/Cmake/v8_nest_rely/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Project/Cmake/v8_nest_rely/build/test.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

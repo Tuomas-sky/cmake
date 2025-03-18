@@ -1,0 +1,10 @@
+^D:\PROJECT\CMAKE\V2_CREATE_LIB\BUILD\CMAKEFILES\62803E2590086E440C5FD3838EA3BE3E\GENERATE.STAMP.RULE
+setlocal
+D:\software\CMake\bin\cmake.exe -SD:/Project/Cmake/v2_create_lib -BD:/Project/Cmake/v2_create_lib/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Project/Cmake/v2_create_lib/build/test.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

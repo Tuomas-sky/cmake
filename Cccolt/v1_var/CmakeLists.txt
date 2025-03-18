@@ -1,0 +1,61 @@
+# 测试变量
+# cmake_minimum_required(VERSION 3.15)
+# project(Var)
+# set(var1 "aaa")
+# set(var2 "bbb")
+# set(VAR3_CACAHE "ccc" CACHE STRING "Test ccc")
+# message(STATUS "var1=${var1}")
+# message(STATUS "var2=${var2}")
+# add_subdirectory(module)
+# message(STATUS "out var1=${var1}")
+# message(STATUS "out var2=${var2}")
+# message(STATUS "out child=${child}")
+# message(STATUS "cache var1=" $CACHE{var1})
+# message(STATUS "cache var3_cache=" $CACHE{VAR3_CACAHE}) #取出cache变量
+# unset(VAR3_CACAHE CACHE)
+
+# ////////////////////////////////////////////////////////////////
+# if & 操作符
+cmake_minimum_required(VERSION 3.15)
+project(Var)
+# add_subdirectory(module)
+message(STATUS "====================")
+
+# add_executable(app main.cpp)
+# if(TARGET app)
+#     message(STATUS "app target exists")
+# else()
+#     message(STATUS "app does not target exists")
+# endif()
+
+# unset(abc)
+# if(abc EQUAL "abc")# abc变量！="abc"字符串，进入else
+# message(STATUS "abc =\"abc\"")
+# else()
+# message(STATUS "abc ！=\"abc\"")
+# endif()
+
+# if(abc STREQUAL "abc")#abc变量视为字符串="abc"字符串，进入if
+# message(STATUS "abc =\"abc\"")
+# else()
+# message(STATUS "abc ！=\"abc\"")
+# endif()
+
+# set(m "opencv_")
+# if(m MATCHES "^open")#模式匹配
+# message(STATUS "matches")
+# else()
+# message(STATUS "don't matches")    
+# endif()
+
+# set(fi "aa" "bb" "cc")
+# # foreach(f ${fi})
+# foreach(f IN LISTS fi)
+#     message(STATUS ${f})
+# endforeach(i)
+
+# foreach(f "${fi}")
+#     message(STATUS ${f})
+# endforeach()
+
+

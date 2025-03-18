@@ -1,0 +1,25 @@
+#分文件编写
+cmake_minimum_required(VERSION 3.10)
+
+project(test)
+
+set(CMAKE_CXX_STANDARD 11)
+
+# aux_source_directory(${PROJECT_CURRENT_DIR}/src SRC) 不好用
+file(GLOB SRC ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+
+#添加头文件
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+
+# exe输出的目录
+set(EXECUTABLE_OUTPUT_PATH ./bin )  
+#链接静态库文件
+link_libraries(calc_lib)
+
+#指定静态/动态库的路径
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
+
+add_executable(calculate ${SRC})
+
+

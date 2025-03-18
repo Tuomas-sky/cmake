@@ -1,0 +1,10 @@
+D:/Project/Cmake/dabing/v7_nest_cmake/build/CMakeFiles/ALL_BUILD.dir
+D:/Project/Cmake/dabing/v7_nest_cmake/build/CMakeFiles/ZERO_CHECK.dir
+D:/Project/Cmake/dabing/v7_nest_cmake/build/calc/CMakeFiles/calc.dir
+D:/Project/Cmake/dabing/v7_nest_cmake/build/calc/CMakeFiles/ALL_BUILD.dir
+D:/Project/Cmake/dabing/v7_nest_cmake/build/sort/CMakeFiles/sort.dir
+D:/Project/Cmake/dabing/v7_nest_cmake/build/sort/CMakeFiles/ALL_BUILD.dir
+D:/Project/Cmake/dabing/v7_nest_cmake/build/test_calc/CMakeFiles/app1.dir
+D:/Project/Cmake/dabing/v7_nest_cmake/build/test_calc/CMakeFiles/ALL_BUILD.dir
+D:/Project/Cmake/dabing/v7_nest_cmake/build/test_sort/CMakeFiles/app2.dir
+D:/Project/Cmake/dabing/v7_nest_cmake/build/test_sort/CMakeFiles/ALL_BUILD.dir

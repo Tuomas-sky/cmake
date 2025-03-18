@@ -1,0 +1,56 @@
+#分文件编写
+cmake_minimum_required(VERSION 3.10)
+
+project(test)
+
+set(CMAKE_CXX_STANDARD 11)
+
+# aux_source_directory(${PROJECT_CURRENT_DIR}/src SRC) 不好用
+file(GLOB SRC ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+
+#添加头文件
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+# exe输出的目录
+set(EXECUTABLE_OUTPUT_PATH ./bin)
+
+# 确保库路径正确
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
+message("current_source: "${CMAKE_CURRENT_SOURCE_DIR})
+# 使用find_library查找库
+find_library(CALC_LIB NAMES calc_lib PATHS ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+message(STATUS "222222*******************")
+# 检查库是否找到
+if(NOT CALC_LIB)
+    message(FATAL_ERROR "calc_lib library not found")
+endif()
+add_executable(calc ${SRC})
+target_link_libraries(calc ${CALC_LIB})
+
+# 确保DLL在运行时可用
+add_custom_command(TARGET calc POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+    ${CMAKE_CURRENT_SOURCE_DIR}/lib/calc_dll.dll $<TARGET_FILE_DIR:calc>)
+
+# message(FATAL_ERROR "33333************")#cmake会中断
+message(STATUS "33333************")
+
+
+# cmake_minimum_required(VERSION 3.0)
+# project(V4TestLib)
+
+# # 设置C++标准
+# set(CMAKE_CXX_STANDARD 11)
+# set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# # 指定头文件目录
+# include_directories(include)
+
+# # 指定库文件目录
+# link_directories(lib)
+
+# # 添加可执行文件
+# add_executable(main main.cpp)
+
+# # 链接库文件
+# target_link_libraries(main calc_lib)

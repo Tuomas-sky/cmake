@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.12)
+project(test_sort)
+
+aux_source_directory(./ SRC)
+include_directories(${HEADPATH})
+link_directories(${LIBPATH})
+link_libraries(${SORTLIB})# 此处链接了CALCLIB
+set(EXECUTABLE_OUTPUT_PATH ${EXEPATH})
+add_executable(${SORTAPP} ${SRC})
+

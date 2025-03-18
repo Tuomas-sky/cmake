@@ -1,0 +1,10 @@
+^D:\PROJECT\CMAKE\V9_NEST_LINKDLL\BUILD\CMAKEFILES\F84E59CFDCA43DFE33BA54D5F5521185\GENERATE.STAMP.RULE
+setlocal
+D:\software\CMake\bin\cmake.exe -SD:/Project/Cmake/v9_nest_linkdll -BD:/Project/Cmake/v9_nest_linkdll/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Project/Cmake/v9_nest_linkdll/build/test.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

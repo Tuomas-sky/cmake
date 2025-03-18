@@ -1,0 +1,47 @@
+# cmake_minimum_required(VERSION 3.15)
+# project(VarModule)
+# set(var2 "language" PARENT_SCOPE)# 通过PARENT_SCOPE使得子目录的变量被父目录使用
+# message(STATUS "module var2=${var2}")
+# # 提升作用域
+# set(child "module child parent used" PARENT_SCOPE)
+# message(STATUS "module child=${child}")
+
+# # 测试exist 
+# cmake_minimum_required(VERSION 3.15)
+# project(Func)
+
+# if(EXISTS ${CMAKE_CURRENT_LIST_DIR}/1.txt)
+#     message(STATUS "1.txt exist")
+# else()
+#     message(STATUS "1.txt does not exist")
+# endif()
+
+# if(EXISTS ${CMAKE_CURRENT_LIST_DIR}/2)
+#     message(STATUS "2 dir exist")
+# else()
+#     message(STATUS "2 dir does not exist")
+# endif()
+
+# if(IS_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/1.txt)
+#     message(STATUS "1 is a dir")
+# else()
+#     message(STATUS "2 does not dir")
+# endif()
+
+# # 遍历文件夹
+# cmake_minimum_required(VERSION 3.15)
+# project(module)
+
+# # 获取当前目录下的所有文件和目录列表
+# execute_process(
+#     COMMAND cmd /c dir /b /a-d ${CMAKE_CURRENT_LIST_DIR}
+#     OUTPUT_VARIABLE files
+# )
+
+# # 使用换行符分隔文件名
+# string(REPLACE "\r\n" ";" files "${files}")
+
+# # 遍历文件列表并打印每个文件名
+# foreach(file ${files})
+#     message(STATUS "file: ${file}")
+# endforeach()

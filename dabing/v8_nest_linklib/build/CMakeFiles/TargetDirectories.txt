@@ -1,0 +1,8 @@
+D:/Project/Cmake/v8_nest_rely/build/CMakeFiles/ALL_BUILD.dir
+D:/Project/Cmake/v8_nest_rely/build/CMakeFiles/ZERO_CHECK.dir
+D:/Project/Cmake/v8_nest_rely/build/calc/CMakeFiles/calc.dir
+D:/Project/Cmake/v8_nest_rely/build/calc/CMakeFiles/ALL_BUILD.dir
+D:/Project/Cmake/v8_nest_rely/build/sort/CMakeFiles/sort.dir
+D:/Project/Cmake/v8_nest_rely/build/sort/CMakeFiles/ALL_BUILD.dir
+D:/Project/Cmake/v8_nest_rely/build/test_sort/CMakeFiles/app2.dir
+D:/Project/Cmake/v8_nest_rely/build/test_sort/CMakeFiles/ALL_BUILD.dir

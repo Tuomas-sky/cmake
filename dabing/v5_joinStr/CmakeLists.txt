@@ -1,0 +1,62 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(test)
+
+set(CMAKE_CXX_STANDARD 11)
+
+# aux_source_directory(${PROJECT_CURRENT_DIR}/src SRC) 不好用
+#添加头文件
+include_directories(${CMAKE_CURRENR_SOURCE_DIR}/include)
+
+file(GLOB SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
+# 移除指定项
+message("====================")
+message(${SRC})
+list(REMOVE_ITEM SRC ${PROJECT_SOURCE_DIR}/src/main.cpp)
+message("====================")
+message(${SRC})
+message("====================")
+# 添加 
+set(tmp "hello " "world")
+message(${tmp})
+# 拼接
+set(tmp2 ${tmp} " **** " " 123 " " acb "  " 456 " ) 
+# message(${tmp2})
+# # 追加
+# list(APPEND tmp2 " @@@@" ${tmp})
+# message(${tmp2})
+message("====================")
+# list 操作
+list(LENGTH tmp2 len)
+message("list len ="${len})
+list(GET tmp2 0 -1 str) # 读取列表中指定的元素
+message("index[0],index[-1]=" ${str}) 
+list(JOIN tmp2 , join) # 用,拼接
+message("join :" ${join})
+list(FIND tmp2 "123" find) #查找元素
+message("find =" ${find})
+list(FIND tmp2 "CC" find2)
+message("find2=" ${find2})
+list(APPEND tmp2 " hhh")#追加
+message("append=" ${tmp2})
+list(INSERT tmp2 -2 " tail ")
+message("insert=" ${tmp2})
+list(PREPEND tmp2 "head ")
+message("prepend=" ${tmp2})
+list(POP_BACK tmp2 pop)
+message("pop_back=" ${pop})
+message(${tmp2})
+list(REVERSE tmp2)#反转
+message(${tmp2})
+list(SORT tmp2 )#NATURAL INSENSITIVE ASCENDING
+message(${tmp2})
+
+
+
+# lib / dll 输出目录
+set(LIBRARY_OUTPUT_PATH ./bin)
+# add_executable(calculator ${SRC})
+# 生成lib/dll
+# add_library(calc_dll SHARED ${SRC} )
+add_library(calc_lib STATIC ${SRC} )
+

@@ -1,0 +1,29 @@
+
+#同一文件下
+
+# cmake_minimum_required(VERSION 3.10)
+# project(test)
+# set(CMAKE_CXX_STANDARD 11)
+# #查找源文件的三种方法
+# #将.cpp文件放入SRC
+# #set(SRC main.cpp add.cpp sub.cpp multi.cpp div.cpp)
+# # aux_source_directory(${PROJECT_SOURCE_DIR} SRC)
+# file(GLOB SRC ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+# #设置exe的输出目录
+# set(EXECUTABLE_OUTPUT_PATH ./bin )
+# add_executable(calculator ${SRC})
+#分文件编写
+cmake_minimum_required(VERSION 3.10)
+
+project(test)
+
+set(CMAKE_CXX_STANDARD 11)
+
+#添加头文件
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+# aux_source_directory(${PROJECT_CURRENT_DIR}/src SRC)
+file(GLOB SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
+
+set(EXECUTABLE_OUTPUT_PATH ./bin)
+
+add_executable(calculator ${SRC})

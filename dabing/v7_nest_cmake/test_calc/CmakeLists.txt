@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.12)
+project(test_calc)
+
+aux_source_directory(./ SRC)
+include_directories(${HEADPATH})
+link_directories(${LIBPATH})
+# link_libraries(${CALCLIB})
+# set(EXECUTABLE_OUTPUT_PATH ${EXEPATH})
+# add_executable(${CALCAPP} ${SRC})
+
+set(EXECUTABLE_OUTPUT_PATH ${EXEAPTH})
+add_executable(${CALCAPP} ${SRC})
+target_link_libraries(${CALCAPP} ${CALCLIB})
